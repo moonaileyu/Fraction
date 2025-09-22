@@ -13,34 +13,34 @@ void Fraction::Print()
     cout << numerator << " / " << denominator << endl;
 }
 
-Fraction Fraction::Add(Fraction other)
+Fraction Fraction::Add(Fraction* other)
 {
     Fraction result;
-    result.Init(numerator * other.denominator + other.numerator * denominator, denominator * other.denominator);
+    result.Init(numerator * other->denominator + other->numerator * denominator, denominator * other->denominator);
 
     return result;
 }
 
-Fraction Fraction::Sub(Fraction other)
+Fraction Fraction::Sub(Fraction* other)
 {
     Fraction result;
-    result.Init(numerator * other.denominator - other.numerator * denominator, denominator * other.denominator);
+    result.Init(numerator * other->denominator - other->numerator * denominator, denominator * other->denominator);
 
     return result;
 }
 
-Fraction Fraction::Mul(Fraction other)
+Fraction Fraction::Mul(Fraction* other)
 {
     Fraction result;
-    result.Init(numerator * other.numerator, denominator * other.denominator);
+    result.Init(numerator * other->numerator, denominator * other->denominator);
 
     return result;
 }
 
-Fraction Fraction::Div(Fraction other)
+Fraction Fraction::Div(Fraction* other)
 {
     Fraction result;
-    result.Init(numerator * other.denominator, denominator * other.numerator);
+    result.Init(numerator * other->denominator, denominator * other->numerator);
 
     return result;
 }
